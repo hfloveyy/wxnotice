@@ -2,11 +2,9 @@
   <text class="notice-title">{{title}}</text>
   <text class="notice-content">{{content}}</text>
 </view>
-<view>
-<picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
-<picker-view-column>
-<view wx:for="{{prisons}}" style="line-height: 50px">{{item}}</view>
-</picker-view-column>
+<view class="container" wx:for="{{userinfo}}">
 
-</picker-view>
+    <image class="userinfo-avatar" src="{{item.url}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{item.nickname}}</text>
+
 </view>
